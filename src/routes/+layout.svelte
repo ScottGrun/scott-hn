@@ -2,6 +2,20 @@
 	import '@fontsource-variable/noto-sans';
 	import '@fontsource/ibm-plex-mono/500.css';
 	import '../global.css';
+	import Header from '$lib/components/Header.svelte';
+	import SidebarNavigation from '$lib/components/SidebarNavigation/SidebarNavigation.svelte';
+	import Logo from '$lib/components/Logo.svelte';
 </script>
 
-<slot />
+<Header />
+<div class="flex">
+	<aside
+		class="sticky top-0 hidden min-h-screen w-[240px] self-start border-r border-neutral-200 p-4 lg:block"
+	>
+		<Logo class="pb-4" />
+		<SidebarNavigation />
+	</aside>
+	<main class="h-full w-full">
+		<slot />
+	</main>
+</div>
