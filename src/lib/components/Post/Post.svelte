@@ -49,7 +49,7 @@
 	</div>
 	<div>
 		<a
-			href={`/${post.id}`}
+			href={`/item?id=${post.id}`}
 			class="text-sm font-medium after:absolute after:inset-0 md:mr-1 md:inline"
 		>
 			{post.title}
