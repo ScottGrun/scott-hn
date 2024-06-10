@@ -12,7 +12,10 @@
 	<aside
 		class="sticky top-0 hidden min-h-screen w-[240px] self-start border-r border-neutral-200 p-4 lg:block"
 	>
-		<Logo class="pb-4" />
+		<a href="/">
+			<Logo class="pb-4" />
+			<span class="sr-only">Home</span>
+		</a>
 		<SidebarNavigation />
 	</aside>
 	<main class="h-full w-full">
