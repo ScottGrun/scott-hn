@@ -8,19 +8,15 @@
 
 <ul id="sidebar-content" class="pt-4">
 	<SidebarLink href="/newest">
-		<HomeIcon class="mr-3" />
-		New</SidebarLink
-	>
+		<HomeIcon class="mr-3" /> New
+	</SidebarLink>
 	<SidebarLink href="/ask">
-		<SpeakIcon class="mr-3" />
-		Ask</SidebarLink
-	>
+		<SpeakIcon class="mr-3" /> Ask
+	</SidebarLink>
 	<SidebarLink href="/show">
-		<EyeIcon class="mr-3" />
-		Show</SidebarLink
-	>
+		<EyeIcon class="mr-3" />Show
+	</SidebarLink>
 	<SidebarLink href="/jobs">
-		<BriefcaseIcon class="mr-3" />
-		Jobs</SidebarLink
-	>
+		<BriefcaseIcon class="mr-3" /> Jobs
+	</SidebarLink>
 </ul>
