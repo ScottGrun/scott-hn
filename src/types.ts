@@ -10,3 +10,17 @@ export interface Post {
 	url: string;
 	domain: string;
 }
+
+export interface PostComment {
+	id: number;
+	level: number;
+	user: string;
+	time: number;
+	time_ago: string;
+	content: string;
+	comments: PostComment[];
+}
+
+export interface PostContent extends Post {
+	comments: PostComment[];
+}
