@@ -29,7 +29,7 @@
 >
 	<div
 		aria-hidden="true"
-		class="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-stone-50"
+		class="mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-stone-50"
 	>
 		<svelte:component this={getIconFromPostType(post.type)} />
 	</div>
