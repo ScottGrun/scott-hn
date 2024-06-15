@@ -7,9 +7,10 @@
 		comment: PostComment;
 		isSubComment?: boolean;
 		isLastChild: boolean;
+		postOwner: string;
 	}
 
-	const { comment, isSubComment, isLastChild }: CommentProps = $props();
+	const { comment, isSubComment, isLastChild, postOwner }: CommentProps = $props();
 	const { comments, content } = comment;
 	const santizedContent = comment?.content ? sanitize(content) : null;
 </script>
@@ -37,7 +38,11 @@
 		<div class="relative flex w-full gap-2 text-sm font-normal text-neutral-600">
 			<a href={`/users/${comment.user}`} class="block font-semibold text-neutral-900">
 				{comment.user}
+				{#if postOwner === comment.user}
+					<span class="text-blue-500">OP</span>
+				{/if}
 			</a>
+
 			•
 			<time>{comment.time_ago}</time>
 		</div>

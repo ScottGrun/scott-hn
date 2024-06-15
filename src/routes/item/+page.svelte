@@ -32,7 +32,7 @@
 
 			{#if sanitizedPostContent}
 				<div
-					class="prose max-w-none break-words pt-9 text-base leading-normal text-neutral-600 md:prose-lg prose-a:text-orange-500 prose-pre:whitespace-pre-wrap md:text-lg"
+					class="prose-base max-w-none break-words pt-9 text-base leading-normal text-neutral-600 prose-a:text-orange-500 prose-pre:whitespace-pre-wrap"
 				>
 					{@html sanitizedPostContent}
 				</div>
@@ -45,7 +45,11 @@
 			<h2 class="py-4 text-lg font-medium">{data.post.comments_count} Comments</h2>
 			<ul>
 				{#each data.post.comments as comment, index (comment.id)}
-					<Comment {comment} isLastChild={index === data.post.comments.length - 1} />
+					<Comment
+						{comment}
+						isLastChild={index === data.post.comments.length - 1}
+						postOwner={data.post.user}
+					/>
 				{/each}
 			</ul>
 		</section>
