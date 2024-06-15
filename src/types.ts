@@ -9,6 +9,7 @@ export interface Post {
 	type: string;
 	url: string;
 	domain: string;
+	content?: string;
 }
 
 export interface PostComment {
