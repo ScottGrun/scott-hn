@@ -59,12 +59,3 @@
 		{/if}
 	</article>
 </li>
-
-<style lang="postcss">
-	:global(html) {
-		ul article ul li:last-child .test {
-			background-color: blue !important;
-			width: 50px;
-		}
-	}
-</style>
