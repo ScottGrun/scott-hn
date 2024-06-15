@@ -21,7 +21,7 @@
 </script>
 
 {#if data && data.content}
-	<div class="py-8">
+	<div class="pb-4 pt-8">
 		<h1 class="text-xl font-semibold capitalize md:text-2xl">
 			{getPageTitleFromSlug($page.params.slug)}
 		</h1>

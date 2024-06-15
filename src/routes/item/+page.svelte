@@ -19,7 +19,7 @@
 			<ArrowLeftIcon />
 			Back
 		</button>
-		<section class="6 mt-8 border-b border-neutral-300 pb-12 md:mt-14 lg:pb-10">
+		<section class="mt-8 border-b border-neutral-300 pb-12 md:mt-14 lg:pb-10">
 			<h1 class="text-3xl font-semibold md:text-4xl">{data.post.title}</h1>
 			<PostAttributes
 				class="mt-6 text-sm "
