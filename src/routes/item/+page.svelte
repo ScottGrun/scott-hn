@@ -28,6 +28,7 @@
 				timeAgo={data.post?.time_ago}
 				user={data.post?.user}
 				postType={data.post?.type}
+				link={{ domain: data.post?.domain, url: data.post?.url }}
 			/>
 
 			{#if sanitizedPostContent}

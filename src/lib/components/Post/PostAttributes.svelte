@@ -3,6 +3,7 @@
 	import PenNibIcon from '$lib/assets/icons/pen-nib.svg?component';
 	import TimeIcon from '$lib/assets/icons/time.svg?component';
 	import CommentIcon from '$lib/assets/icons/comment.svg?component';
+	import ExternalLinkIcon from '$lib/assets/icons/external-link.svg?component';
 
 	import { twMerge } from 'tailwind-merge';
 
@@ -13,6 +14,10 @@
 		commentsCount: number | null;
 		postType: string;
 		class?: string;
+		link: {
+			domain: string | null;
+			url: string | null;
+		};
 	}
 
 	const getCommentCountText = (count: number) => {
@@ -28,11 +33,21 @@
 		timeAgo,
 		commentsCount,
 		postType,
+		link,
 		class: className
 	}: PostAttributes = $props();
 </script>
 
 <dl class={twMerge('mt-2 flex flex-wrap gap-x-3 gap-y-4 text-xs  text-neutral-600', className)}>
+	{#if link}
+		<div class="flex items-center gap-1">
+			<ExternalLinkIcon class="h-4 w-4 text-neutral-900" />
+			<dd>
+				<a href={link.url} class="font-medium text-orange-500">{link.domain}</a>
+			</dd>
+			<dt class="sr-only">Shared Link</dt>
+		</div>
+	{/if}
 	{#if typeof pointsCount === 'number'}
 		<div class="flex items-center gap-1">
 			<DoubleUpIcon class="text-neutral-900" aria-hidden="true" />
