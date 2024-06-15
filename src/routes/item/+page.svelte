@@ -18,7 +18,7 @@
 				<ArrowLeftIcon />
 				Back
 			</button>
-			<section>
+			<section class="border-b border-neutral-300 pb-12 lg:pb-10">
 				<h1 class="text-3xl font-semibold">{data.post.title}</h1>
 				<PostAttributes
 					class="mt-6"
@@ -31,7 +31,7 @@
 
 				{#if sanitizedPostContent}
 					<div
-						class="prose max-w-none border-b border-b-neutral-200 pb-12 pt-9 text-base text-neutral-600 md:prose-lg md:py-12 md:text-lg lg:pb-10 lg:pt-12"
+						class="prose max-w-none pt-9 text-base leading-normal text-neutral-600 md:prose-lg md:text-lg"
 					>
 						{@html sanitizedPostContent}
 					</div>
