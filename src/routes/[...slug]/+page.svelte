@@ -6,14 +6,18 @@
 
 	const getPageTitleFromSlug = (slug: string) => {
 		switch (slug) {
+			case 'best':
+				return 'Best';
+			case 'news':
+				return 'News';
 			case 'newest':
 				return 'New';
 			case 'ask':
 				return 'Ask';
 			case 'show':
 				return 'Show';
-			case 'job':
-				return 'Job';
+			case 'jobs':
+				return 'Jobs';
 			default:
 				return 'News';
 		}

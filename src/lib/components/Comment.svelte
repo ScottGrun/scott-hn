@@ -31,7 +31,7 @@
 	>
 		{#if isSubComment}
 			<div
-				class="absolute left-[-0.5px] top-[-32px] z-10 h-[43px] w-[12px] rounded-bl border-b border-l border-neutral-300 antialiased"
+				class="absolute left-[-1px] top-[-32px] z-10 h-[43px] w-[12px] rounded-bl border-b border-l border-neutral-300 antialiased"
 			></div>
 		{/if}
 
