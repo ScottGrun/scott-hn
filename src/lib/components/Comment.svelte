@@ -39,13 +39,9 @@
 			>
 			• <time>{comment.time_ago}</time>
 		</div>
-
-		{#if santizedContent}
-			<div class="prose mt-3 text-sm text-neutral-900">
-				{@html santizedContent}
-			</div>
-		{/if}
-
+		<div class="prose pt-3 text-sm leading-normal text-neutral-900">
+			{@html santizedContent}
+		</div>
 		{#if comments && comments.length > 0}
 			<ul class={twMerge(isSubComment && 'pt-8', 'relative pl-4 pt-4')}>
 				{#each comment.comments as subComment, index (subComment.id)}
