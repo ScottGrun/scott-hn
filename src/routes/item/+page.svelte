@@ -3,6 +3,7 @@
 	import Comment from '$lib/components/Comment.svelte';
 	import PageEmptyState from '$lib/components/PageEmptyState.svelte';
 	import Poll from '$lib/components/Poll.svelte';
+	import Post from '$lib/components/Post/Post.svelte';
 	import PostAttributes from '$lib/components/Post/PostAttributes.svelte';
 	import sanitizeHtml from 'sanitize-html';
 
@@ -10,6 +11,9 @@
 	const sanitizedPostContent = data.post?.content ? sanitizeHtml(data.post.content) : null;
 </script>
 
+<svelte:head>
+	<title>{data.post?.title}</title>
+</svelte:head>
 {#if data && data.post}
 	<div class="max-w-[890px]">
 		<button

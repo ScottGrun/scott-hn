@@ -24,6 +24,9 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Scott_HN | {getPageTitleFromSlug($page.params.slug)}</title>
+</svelte:head>
 {#if data && data.content}
 	<div class="pb-4 pt-8">
 		<h1 class="text-xl font-semibold capitalize md:text-2xl">
