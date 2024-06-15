@@ -10,6 +10,10 @@ export interface Post {
 	url: string;
 	domain: string;
 	content?: string;
+	poll?: {
+		item: string;
+		points: number;
+	}[];
 }
 
 export interface PostComment {

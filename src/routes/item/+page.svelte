@@ -2,6 +2,7 @@
 	import ArrowLeftIcon from '$lib/assets/icons/arrow-left.svg?component';
 	import Comment from '$lib/components/Comment.svelte';
 	import PageEmptyState from '$lib/components/PageEmptyState.svelte';
+	import Poll from '$lib/components/Poll.svelte';
 	import PostAttributes from '$lib/components/Post/PostAttributes.svelte';
 	import sanitizeHtml from 'sanitize-html';
 
@@ -35,6 +36,9 @@
 				>
 					{@html sanitizedPostContent}
 				</div>
+			{/if}
+			{#if data.post.poll}
+				<Poll poll={data.post.poll} class="pt-9 md:pt-12" />
 			{/if}
 		</section>
 		<section>
