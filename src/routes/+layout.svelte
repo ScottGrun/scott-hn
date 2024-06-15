@@ -19,7 +19,7 @@
 		<SidebarNavigation />
 	</aside>
 	<main class="h-full w-full">
-		<div class="px-4 md:px-8 lg:px-16">
+		<div class="h-full w-full px-4 md:px-8 lg:px-16">
 			<slot />
 		</div>
 	</main>

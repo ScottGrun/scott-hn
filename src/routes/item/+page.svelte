@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ArrowLeftIcon from '$lib/assets/icons/arrow-left.svg?component';
 	import Comment from '$lib/components/Comment.svelte';
+	import PageEmptyState from '$lib/components/PageEmptyState.svelte';
 	import PostAttributes from '$lib/components/Post/PostAttributes.svelte';
 	import sanitizeHtml from 'sanitize-html';
 
@@ -8,7 +9,7 @@
 	const sanitizedPostContent = data.post?.content ? sanitizeHtml(data.post.content) : null;
 </script>
 
-{#if data.post}
+{#if data && data.post}
 	<div class="max-w-[890px]">
 		<button
 			onclick={() => history.back()}
@@ -45,4 +46,6 @@
 			</ul>
 		</section>
 	</div>
+{:else}
+	<PageEmptyState />
 {/if}
