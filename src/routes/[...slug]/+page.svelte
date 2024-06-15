@@ -19,21 +19,19 @@
 	};
 </script>
 
-<div class="px-4 md:px-8 lg:px-16">
-	<header class="py-8">
-		<h1 class="text-xl font-semibold capitalize md:text-2xl">
-			{getPageTitleFromSlug($page.params.slug)}
-		</h1>
-		<p class="mt-2 text-xs text-neutral-500 md:text-sm">
-			Discover the latest submissions in the Hacker News community.
-		</p>
-		{#if data.content.length === 0}
-			<p class="mt-8 text-sm text-neutral-500">No posts found.</p>
-		{/if}
-		<ul>
-			{#each data.content as post (post.id)}
-				<Post {post} />
-			{/each}
-		</ul>
-	</header>
-</div>
+<header class="py-8">
+	<h1 class="text-xl font-semibold capitalize md:text-2xl">
+		{getPageTitleFromSlug($page.params.slug)}
+	</h1>
+	<p class="mt-2 text-xs text-neutral-500 md:text-sm">
+		Discover the latest submissions in the Hacker News community.
+	</p>
+	{#if data.content.length === 0}
+		<p class="mt-8 text-sm text-neutral-500">No posts found.</p>
+	{/if}
+	<ul>
+		{#each data.content as post (post.id)}
+			<Post {post} />
+		{/each}
+	</ul>
+</header>

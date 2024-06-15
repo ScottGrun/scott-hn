@@ -5,3 +5,16 @@
 body {
 	@apply text-neutral-900;
 }
+
+html {
+	/* This neat piece of CSS adds the scrollbar width to the width of the page to prevent layout shift when navigating
+	between pages that have a scrollbar and those that dont */
+	scrollbar-gutter: stable both-edges;
+}
+
+code {
+	@apply text-neutral-950;
+}
+pre {
+	@apply bg-neutral-100;
+}
