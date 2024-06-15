@@ -3,7 +3,7 @@
 	import PenNibIcon from '$lib/assets/icons/pen-nib.svg?component';
 	import TimeIcon from '$lib/assets/icons/time.svg?component';
 	import CommentIcon from '$lib/assets/icons/comment.svg?component';
-	import PostAttributeWrapper from './PostAttributeWrapper.svelte';
+
 	import { twMerge } from 'tailwind-merge';
 
 	interface PostAttributes {
@@ -17,9 +17,9 @@
 
 	const getCommentCountText = (count: number) => {
 		if (count === 1) {
-			return '1 comment';
+			return 'comment';
 		}
-		return `${count} comments`;
+		return 'comments';
 	};
 
 	const {
@@ -32,30 +32,35 @@
 	}: PostAttributes = $props();
 </script>
 
-<div class={twMerge('mt-2 flex flex-wrap gap-x-3 gap-y-4', className)}>
+<dl class={twMerge('mt-2 flex flex-wrap gap-x-3 gap-y-4 text-xs  text-neutral-600', className)}>
 	{#if typeof pointsCount === 'number'}
-		<PostAttributeWrapper>
-			<DoubleUpIcon class="text-neutral-900" />
-			{pointsCount} points
-		</PostAttributeWrapper>
+		<div class="flex items-center gap-1">
+			<DoubleUpIcon class="text-neutral-900" aria-hidden="true" />
+			<dd>{pointsCount}</dd>
+			<dt>points</dt>
+		</div>
 	{/if}
 	{#if user}
-		<PostAttributeWrapper>
-			<PenNibIcon class="text-neutral-900" />
-			by
-			<a href={`/user/${user}`} class="font-medium text-orange-500">{user}</a>
-		</PostAttributeWrapper>
+		<div class="flex items-center gap-1">
+			<PenNibIcon class="text-neutral-900" aria-hidden="true" />
+			<dt>by</dt>
+			<dd><a href={`/user/${user}`} class="font-medium text-orange-500">{user}</a></dd>
+		</div>
 	{/if}
 	{#if timeAgo}
-		<PostAttributeWrapper>
+		<div class="flex items-center gap-1">
 			<TimeIcon class="text-neutral-900" />
-			{timeAgo}
-		</PostAttributeWrapper>
+			<dt class="sr-only">Date posted</dt>
+			<dd>{timeAgo}</dd>
+		</div>
 	{/if}
 	{#if typeof commentsCount === 'number' && postType !== 'job'}
-		<PostAttributeWrapper>
+		<div class="flex items-center gap-1">
 			<CommentIcon class="text-neutral-900" />
-			{getCommentCountText(commentsCount)}
-		</PostAttributeWrapper>
+			<dd>{commentsCount}</dd>
+			<dt>
+				{getCommentCountText(commentsCount)}
+			</dt>
+		</div>
 	{/if}
-</div>
+</dl>
