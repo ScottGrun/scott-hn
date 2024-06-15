@@ -13,15 +13,15 @@
 		<div class="mx-auto max-w-[890px]">
 			<button
 				onclick={() => history.back()}
-				class="my-6 flex items-center gap-1 text-sm font-medium text-orange-500"
+				class="mt-6 flex items-center gap-1 text-sm font-medium text-orange-500"
 			>
 				<ArrowLeftIcon />
 				Back
 			</button>
-			<section class="border-b border-neutral-300 pb-12 lg:pb-10">
-				<h1 class="text-3xl font-semibold">{data.post.title}</h1>
+			<section class="mt-12 border-b border-neutral-300 pb-12 lg:pb-10">
+				<h1 class="text-3xl font-semibold md:text-4xl">{data.post.title}</h1>
 				<PostAttributes
-					class="mt-6"
+					class="mt-6 text-sm "
 					commentsCount={data.post?.comments_count}
 					pointsCount={data.post?.points}
 					timeAgo={data.post?.time_ago}
@@ -31,7 +31,7 @@
 
 				{#if sanitizedPostContent}
 					<div
-						class="prose max-w-none pt-9 text-base leading-normal text-neutral-600 md:prose-lg md:text-lg"
+						class="prose max-w-none break-words pt-9 text-base leading-normal text-neutral-600 md:prose-lg prose-a:text-orange-500 prose-pre:whitespace-pre-wrap md:text-lg"
 					>
 						{@html sanitizedPostContent}
 					</div>

@@ -25,7 +25,7 @@
 		class={twMerge(
 			'relative border-l border-transparent',
 			isSubComment && !isLastChild && 'border-neutral-300 antialiased',
-			isSubComment && 'pl-4'
+			isSubComment && 'ml-2 pl-4'
 		)}
 	>
 		{#if isSubComment}
@@ -35,12 +35,15 @@
 		{/if}
 
 		<div class="relative flex w-full gap-2 text-sm font-normal text-neutral-600">
-			<a href={`/users/${comment.user}`} class="block font-semibold text-neutral-900"
-				>{comment.user}</a
-			>
-			• <time>{comment.time_ago}</time>
+			<a href={`/users/${comment.user}`} class="block font-semibold text-neutral-900">
+				{comment.user}
+			</a>
+			•
+			<time>{comment.time_ago}</time>
 		</div>
-		<div class="prose pt-3 text-sm leading-normal text-neutral-900">
+		<div
+			class="prose-sm max-w-none pt-2 text-sm leading-normal text-neutral-900 prose-a:break-all prose-a:text-orange-500 prose-pre:whitespace-pre-wrap"
+		>
 			{@html santizedContent}
 		</div>
 		{#if comments && comments.length > 0}
