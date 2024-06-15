@@ -21,15 +21,16 @@
 		isLastChild && 'z-10'
 	)}
 >
-	<article class={twMerge('relative')}>
+	<article
+		class={twMerge(
+			'relative border-l border-transparent',
+			isSubComment && !isLastChild && 'border-neutral-300 antialiased',
+			isSubComment && 'pl-4'
+		)}
+	>
 		{#if isSubComment}
 			<div
-				class="absolute left-[-16.5px] top-[-32px] z-10 h-[42px] w-[14px] rounded-bl border-b border-l border-neutral-300 antialiased"
-			></div>
-		{/if}
-		{#if isSubComment && !isLastChild}
-			<div
-				class="absolute inset-y-0 left-[-16.5px] z-10 h-full w-[14px] border-l border-neutral-300 antialiased"
+				class="absolute left-[-0.5px] top-[-32px] z-10 h-[42px] w-[14px] rounded-bl border-b border-l border-neutral-300 antialiased"
 			></div>
 		{/if}
 
@@ -43,7 +44,7 @@
 			{@html santizedContent}
 		</div>
 		{#if comments && comments.length > 0}
-			<ul class={twMerge(isSubComment && 'pt-8', 'relative pl-4 pt-4')}>
+			<ul class={twMerge(isSubComment && 'pt-8', 'relative  pt-4')}>
 				{#each comment.comments as subComment, index (subComment.id)}
 					<svelte:self
 						comment={subComment}
