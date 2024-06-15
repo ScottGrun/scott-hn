@@ -1,10 +1,10 @@
 <script lang="ts">
 	import CloseIcon from '$lib/assets/icons/close.svg?component';
 	import MenuIcon from '$lib/assets/icons/menu.svg?component';
-	import Logo from '$lib/assets/icons/logo.svg?component';
 	import { twMerge } from 'tailwind-merge';
 	import { getKeyboardFocusableElements } from '$lib/utils/getKeyboardFocusableElements';
 	import type { Snippet } from 'svelte';
+	import Logo from './Logo.svelte';
 
 	interface SidebarProps {
 		children: Snippet;
@@ -81,7 +81,7 @@
 	<!-- Sidebar -->
 	<div
 		class={twMerge(
-			'fixed left-0 top-0 h-full w-[240px] bg-white p-4 pt-10 leading-normal transition-[left_right] duration-500 will-change-transform',
+			'fixed left-0 top-0 z-20 h-full w-[240px] bg-white p-4 pt-10 leading-normal transition-[left_right] duration-500 will-change-transform',
 			isActive ? 'left-0' : 'left-[-240px]',
 			isVisible ? 'visible' : 'invisible'
 		)}
@@ -89,8 +89,7 @@
 	>
 		<div class="flex items-center">
 			<div class="mr-auto flex items-center">
-				<Logo aria-hidden class="mr-2 h-8 w-8" />
-				<span class="font-mono text-base font-medium leading-6 tracking-[-6%]">Hacker News</span>
+				<Logo />
 			</div>
 			<button
 				aria-controls="sidebar-content"

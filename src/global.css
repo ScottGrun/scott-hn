@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+	isolation: isolate;
 	@apply text-neutral-900;
 }
 
