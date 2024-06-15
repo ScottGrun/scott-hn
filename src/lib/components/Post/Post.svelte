@@ -25,7 +25,7 @@
 </script>
 
 <article
-	class="relative flex w-full items-center rounded py-6 transition-colors hover:bg-orange-50"
+	class="relative -ml-2 flex w-full items-center rounded px-2 py-6 transition-all will-change-transform hover:translate-x-2 hover:bg-orange-50"
 >
 	<div
 		aria-hidden="true"
