@@ -41,7 +41,10 @@
 			{post.title}
 		</a>
 		{#if post.domain}
-			<a href={post.url} class="mt-1 block text-xs font-normal text-neutral-600 md:inline">
+			<a
+				href={post.url}
+				class="z-[99] mt-1 block text-xs font-normal text-neutral-600 hover:text-orange-500 md:inline"
+			>
 				({post.domain})
 			</a>
 		{/if}

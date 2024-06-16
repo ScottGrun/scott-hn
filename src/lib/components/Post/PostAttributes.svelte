@@ -14,7 +14,7 @@
 		commentsCount: number | null;
 		postType: string;
 		class?: string;
-		link: {
+		link?: {
 			domain: string | null;
 			url: string | null;
 		};
