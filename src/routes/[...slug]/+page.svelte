@@ -41,7 +41,9 @@
 	</div>
 	<ul>
 		{#each data.content as post (post.id)}
-			<Post {post} />
+			<li>
+				<Post {post} />
+			</li>
 		{/each}
 	</ul>
 {:else}
