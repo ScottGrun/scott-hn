@@ -59,7 +59,9 @@
 		<div class="flex items-center gap-1">
 			<PenNibIcon class="text-neutral-900" aria-hidden="true" />
 			<dt>by</dt>
-			<dd><a href={`/user/${user}`} class="font-medium text-orange-500">{user}</a></dd>
+			<dd>
+				<a href={`/user/${user}`} class=" font-medium text-orange-500">{user}</a>
+			</dd>
 		</div>
 	{/if}
 	{#if timeAgo}
