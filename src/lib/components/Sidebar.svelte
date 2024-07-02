@@ -68,7 +68,7 @@
 	role="none"
 	onclick={closeSideBar}
 	class={twMerge(
-		'transition-all duration-500 will-change-transform',
+		'transition-all duration-500',
 		isVisible ? 'visible fixed inset-0 z-10 bg-neutral-950 opacity-70' : 'invisible opacity-0'
 	)}
 ></div>

@@ -25,7 +25,7 @@
 </script>
 
 <article
-	class="relative -ml-2 flex w-full items-center rounded px-2 py-6 transition-all will-change-transform hover:translate-x-2 hover:bg-orange-50"
+	class="relative -ml-2 flex w-full cursor-pointer items-center rounded px-2 py-6 transition-all hover:bg-orange-50"
 >
 	<div
 		aria-hidden="true"
@@ -36,14 +36,14 @@
 	<div>
 		<a
 			href={`/item?id=${post.id}`}
-			class="text-sm font-medium after:absolute after:inset-0 after:z-[-1] md:mr-1 md:inline"
+			class="text-sm font-medium after:absolute after:inset-0 after:z-[1] md:mr-1 md:inline"
 		>
 			{post.title}
 		</a>
 		{#if post.domain}
 			<a
 				href={post.url}
-				class="z-[99] mt-1 block text-xs font-normal text-neutral-600 hover:text-orange-500 md:inline"
+				class="z-10 mt-1 block text-xs font-normal text-neutral-600 hover:text-orange-500 md:inline"
 			>
 				({post.domain})
 			</a>

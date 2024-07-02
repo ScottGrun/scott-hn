@@ -60,7 +60,7 @@
 			<PenNibIcon class="text-neutral-900" aria-hidden="true" />
 			<dt>by</dt>
 			<dd>
-				<a href={`/user/${user}`} class=" font-medium text-orange-500">{user}</a>
+				<a href={`/user/${user}`} class="font-medium text-orange-500">{user}</a>
 			</dd>
 		</div>
 	{/if}

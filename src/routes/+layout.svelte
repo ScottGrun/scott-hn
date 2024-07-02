@@ -8,7 +8,7 @@
 </script>
 
 <Header />
-<div class="mx-auto flex max-w-[1400px]">
+<div class="mx-auto flex">
 	<aside
 		class="sticky top-0 hidden min-h-screen w-[240px] self-start border-r border-neutral-200 p-4 lg:block"
 	>
