@@ -69,7 +69,7 @@
 	onclick={closeSideBar}
 	class={twMerge(
 		'transition-all duration-500 will-change-transform',
-		isVisible ? 'visible absolute inset-0 bg-neutral-950 opacity-70' : 'invisible opacity-0'
+		isVisible ? 'visible fixed inset-0 z-10 bg-neutral-950 opacity-70' : 'invisible opacity-0'
 	)}
 ></div>
 <nav class="flex leading-none">
