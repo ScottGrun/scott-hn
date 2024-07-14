@@ -5,7 +5,7 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
 export default defineConfig({
 	plugins: [
-		nodePolyfills({}),
+		nodePolyfills(),
 		sveltekit(),
 		svg({
 			includePaths: ['./src/lib/assets/icons/']
