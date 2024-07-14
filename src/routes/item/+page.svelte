@@ -3,12 +3,12 @@
 	import Comment from '$lib/components/Comment.svelte';
 	import PageEmptyState from '$lib/components/PageEmptyState.svelte';
 	import Poll from '$lib/components/Poll.svelte';
-	import Post from '$lib/components/Post/Post.svelte';
 	import PostAttributes from '$lib/components/Post/PostAttributes.svelte';
-	import sanitizeHtml from 'sanitize-html';
+	// import sanitizeHtml from 'sanitize-html';
 
 	const { data } = $props();
-	const sanitizedPostContent = data.post?.content ? sanitizeHtml(data.post.content) : null;
+	// const sanitizedPostContent = data.post?.content ? sanitizeHtml(data.post.content) : null;
+	const sanitizedPostContent = null;
 </script>
 
 <svelte:head>

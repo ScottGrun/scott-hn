@@ -1,5 +1,5 @@
 import { fetchFromHN } from '$lib/api';
-import type { PostComment, PostContent } from '../../types';
+import type { PostContent } from '../../types';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ url }) => {
