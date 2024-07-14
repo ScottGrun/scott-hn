@@ -12,7 +12,8 @@
 
 	const { comment, isSubComment, isLastChild, postOwner }: CommentProps = $props();
 	const { comments, content } = comment;
-	const santizedContent = comment?.content ? sanitize(content) : null;
+	// const santizedContent = comment?.content ? sanitize(content) : null;
+	const santizedContent = null;
 </script>
 
 <li
