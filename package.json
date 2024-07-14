@@ -29,7 +29,6 @@
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"prettier-plugin-tailwindcss": "^0.6.2",
-		"sanitize-html": "^2.13.0",
 		"svelte": "5.0.0-next.183",
 		"svelte-check": "^3.6.0",
 		"tailwind-merge": "^2.3.0",
@@ -42,6 +41,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/noto-sans": "^5.0.5",
-		"@fontsource/ibm-plex-mono": "^5.0.13"
+		"@fontsource/ibm-plex-mono": "^5.0.13",
+		"isomorphic-dompurify": "^2.13.0"
 	}
 }

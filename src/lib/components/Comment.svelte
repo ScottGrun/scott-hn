@@ -1,5 +1,5 @@
 <script lang="ts">
-	import sanitize from 'sanitize-html';
+	import { sanitize } from 'isomorphic-dompurify';
 	import type { PostComment } from '../../types';
 	import { twMerge } from 'tailwind-merge';
 
@@ -12,8 +12,7 @@
 
 	const { comment, isSubComment, isLastChild, postOwner }: CommentProps = $props();
 	const { comments, content } = comment;
-	// const santizedContent = comment?.content ? sanitize(content) : null;
-	const santizedContent = null;
+	const santizedContent = comment?.content ? sanitize(content) : null;
 </script>
 
 <li

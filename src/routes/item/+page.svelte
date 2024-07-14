@@ -4,11 +4,10 @@
 	import PageEmptyState from '$lib/components/PageEmptyState.svelte';
 	import Poll from '$lib/components/Poll.svelte';
 	import PostAttributes from '$lib/components/Post/PostAttributes.svelte';
-	// import sanitizeHtml from 'sanitize-html';
+	import { sanitize } from 'isomorphic-dompurify';
 
 	const { data } = $props();
-	// const sanitizedPostContent = data.post?.content ? sanitizeHtml(data.post.content) : null;
-	const sanitizedPostContent = null;
+	const sanitizedPostContent = data.post?.content ? sanitize(data.post.content) : null;
 </script>
 
 <svelte:head>
